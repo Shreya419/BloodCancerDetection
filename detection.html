@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detect Cancerous Cells</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://www.cancer.ie/sites/default/files/styles/widescreen_television/public/2020-01/BLOOD%20CELLS.png?h=920929c4&itok=lvGJyHHn') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0.7); /* Adjust opacity as needed */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        .upload-box {
+            border: 2px dashed #007bff;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+        .upload-box:hover {
+            border-color: #0056b3;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Detect Cancerous Cells</h2>
+        <p>Upload an image to analyze and detect cancerous cells.</p>
+        <div class="upload-box" onclick="document.getElementById('image-upload').click()">
+            <label for="image-upload">Click here or drag and drop an image to upload</label>
+            <input type="file" id="image-upload">
+        </div>
+        <button id="detect-btn">Detect Cancer</button>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Cancer Detection Project. All rights reserved.</p>
+    </div>
+</body>
+</html>
